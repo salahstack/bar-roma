@@ -1,0 +1,148 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Bar Roma Brand Fonts */
+  --font-playfair: 'Playfair Display', serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-cormorant: 'Cormorant', sans-serif;
+  /* Bar Roma Brand Colors */
+  --color-roma-red: #c41e3a;
+  --color-roma-gold: #d4af37;
+  --color-roma-dark: #1a1a1a;
+  --color-roma-gray: #4a4a4a;
+  --color-roma-cream: #fff8e7;
+  --color-roma-beige: #f5f5dc;
+  --color-roma-terracotta: #e07856;
+  --color-roma-light-gray: #e8e8e8;
+    /* Bar Roma Animations */
+  --animate-slide-in: slide-in 500ms ease forwards
+}
+
+/**
+  * BASE
+  */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply text-roma-dark
+  }
+  a,
+  img,
+  button {
+    @apply block;
+  }
+  input,
+  button {
+    @apply block w-full bg-transparent outline-none;
+  }
+  button {
+    @apply cursor-pointer transition-all;
+  }
+  button:active {
+    @apply scale-95;
+  }
+  .container {
+    @apply mx-auto px-4 md:px-6;
+  }
+  section {
+    @apply pb-8 md:pb-16;
+  }
+}
+
+@layer components {
+  /**
+  * Header
+  */
+  .header {
+    @apply h-20 fixed left-0 top-0 w-full z-10;
+  }
+
+  .header.active {
+    @apply bg-roma-dark animate-slide-in
+  }
+
+  /**
+  * Hero
+  */
+  .hero {
+    @apply bg-[url('/images/hero-banner.webp')] bg-cover bg-center h-dvh pt-30 pb-8 md:pb-16 relative;
+  }
+  .hero-overlay {
+    @apply absolute bottom-0 left-0 w-full h-10/12 bg-linear-to-t from-black/80 to-black/0 pointer-events-none;
+  }
+
+  /**
+  * Icon Button
+  */
+  .icon-btn {
+    @apply size-10 flex items-center justify-center rounded-full;
+  }
+  .icon-btn.secondary {
+    @apply hover:bg-roma-gold/30 hover:text-roma-dark/70;
+  }
+  .icon-btn.outline {
+    @apply bg-white/10 border-2 border-white/40;
+  }
+  /**
+  * Button
+  */
+  .btn {
+    @apply h-10 px-10 rounded-lg flex items-center justify-center shadow-lg font-medium;
+  }
+  .btn.primary {
+    @apply bg-roma-red text-white font-medium;
+  }
+  .btn.secondary {
+    @apply text-roma-gold border-2 border-roma-gold hover:bg-roma-gold hover:text-roma-dark;
+  }
+
+  /**
+  * Tabs
+  */
+
+  .tabs {
+    @apply pb-4 border-b border-b-roma-gray/20 md:pb-0 md:border-none
+  }
+  .tab-panel {
+    @apply opacity-0 scale-0 transition-all
+    
+  }
+  .tab-panel.active {
+    @apply opacity-100 scale-100
+  }
+
+  /**
+  * Tab button
+  */
+  .tab-button {
+    @apply font-medium opacity-65 font-playfair
+  }
+  .tab-button.active {
+    @apply opacity-100 border-b-3 border-b-roma-gold
+  }
+}
+
+
+/**
+* UTILITIES
+*/
+
+@layer utilities {
+  .img-cover {
+    @apply w-full h-full object-cover
+  }
+  .img-box {
+    @apply overflow-hidden 
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0)
+    }
+  }
+}
