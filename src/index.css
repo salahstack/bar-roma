@@ -76,7 +76,7 @@
     @apply flex flex-col items-center gap-1 md:flex-row md:gap-3;
   }
   .navbar .navbar-list .navbar-link {
-    @apply px-2 py-2 text-roma-dark font-semibold duration-150 hover:text-roma-red/85 active:text-roma-red whitespace-nowrap
+    @apply px-2 py-2 text-roma-dark font-semibold duration-150 hover:text-roma-red/85 active:text-roma-red whitespace-nowrap relative after:absolute after:duration-150 after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-roma-red hover:after:w-full
   }
 
   /**
