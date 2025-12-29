@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section
       className='section bg-roma-cream'
-      id='about'
+      id='la-nostra-storia'
     >
       <div className='container'>
         <div className='flex item-center gap-4 py-10'>
@@ -101,7 +101,7 @@ const About = () => {
             <q className='font-playfair text-roma-dark/60 font-semibold text-xl text-center block mt-14 mb-4 italic'>
               Un'eredità di Eccellenza Italiana
             </q>
-            <p className='font-playfair text-lg text-roma-dark/70 text-center'>
+            <p className='font-playfair text-lg text-roma-dark/70 text-center first-letter:text-roma-gold first-letter:text-5xl first-letter:font-bold first-letter:mr-1.5'>
               Dall’apertura nel vivace cuore della città, Bar Roma è rimasto un
               faro costante della vera cultura italiana. Ciò che è iniziato come
               un umile bar per espresso per i lavoratori locali si è evoluto in
