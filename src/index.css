@@ -60,7 +60,23 @@
   }
 
   .header.active {
-    @apply bg-roma-dark animate-slide-in
+    @apply bg-roma-dark animate-slide-in;
+  }
+
+  /**
+  * Navbar
+  */
+  .navbar {
+    @apply absolute z-10 shadow-2xl transition-transform right-6 top-[calc(100%+4px)] md:block bg-roma-beige p-2 md:px-4 md:py-1 rounded-lg opacity-0 scale-0 invisible origin-top-right md:opacity-100 md:scale-100 md:visible md:static md:inset-auto
+  }
+  .navbar.active {
+    @apply opacity-100 scale-100 visible
+  }
+  .navbar .navbar-list {
+    @apply flex flex-col items-center gap-1 md:flex-row md:gap-3;
+  }
+  .navbar .navbar-list .navbar-link {
+    @apply px-2 py-2 text-roma-dark font-semibold duration-150 hover:text-roma-red/85 active:text-roma-red whitespace-nowrap
   }
 
   /**

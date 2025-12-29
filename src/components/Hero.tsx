@@ -9,7 +9,7 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className='hero'>
+    <section className='hero' id='casa'>
       <div className='container h-full flex flex-col items-center justify-center'>
         <div className='text-center relative z-1'>
           <p className='text-roma-gold uppercase font-montserrat font-medium'>
@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
         <div className='text-white relative z-1 w-full text-center mt-10'>
           <a
-            href='#about'
+            href='#la-nostra-storia'
             className='block'
           >
             <span className='block mb-4'> SCORRI</span>

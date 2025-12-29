@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section
       className='section bg-roma-cream'
-      id='about'
+      id='la-nostra-storia'
     >
       <div className='container'>
         <div className='flex item-center gap-4 py-10'>
