@@ -29,6 +29,7 @@ const Hero = () => {
           <Button>Prenota ora</Button>
           <Button
             classes='mt-4 md:mt-0 gap-3'
+            to='#menu'
             variant='secondary'
             aria-label='scopri in nostro menù'
           >

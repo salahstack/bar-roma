@@ -4,6 +4,7 @@
 import About from "./components/About";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Menu from "./components/Menu";
 import SignatureOfferings from "./components/SignatureOfferings";
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       <About />
       {/* Signature Offerings Section */}
       <SignatureOfferings />
+      {/* Menu */}
+      <Menu />
     </>
   );
 }

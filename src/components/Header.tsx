@@ -12,7 +12,6 @@ import { Menu, X } from 'lucide-react';
  * Constants
  */
 import { navLinks } from '../constants/nav-links';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -24,12 +23,12 @@ const Header = () => {
   return (
     <header className={`header ${isScrolling ? 'active' : ''}`}>
       <div className='container flex items-center justify-between gap-4 h-full relative'>
-        <Link to='/'>
+        <a href='#casa'>
           <h1 className='text-3xl font-playfair font-medium text-white whitespace-nowrap'>
             Bar Roma
           </h1>
           <span className='font-cormorant text-roma-gold font-bold'>Dal 1908</span>
-        </Link>
+        </a>
         <Navbar
           links={navLinks}
           isOpen={isOpen}

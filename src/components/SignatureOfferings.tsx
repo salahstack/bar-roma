@@ -22,8 +22,8 @@ const SignatureOfferings  = () => {
         </div>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-17'>
           {
-            signatureOfferingsData.map(({ title, description, image, label, href, icon }, index) => (
-              <SignatureOfferingsCard title={title} description={description} image={image} label={label} href={href}  key={index} icon={icon}/>
+            signatureOfferingsData.map(({ title, description, image, label, href, icon, category }, index) => (
+              <SignatureOfferingsCard title={title} description={description} image={image} label={label} href={href} category={category}  key={index} icon={icon}/>
             ))
           }
         </div>
