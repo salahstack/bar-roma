@@ -1,5 +1,19 @@
-import type { ComponentType, FC, } from 'react';
+/**
+ * Node modules
+ */
+import type { ComponentType, FC } from 'react';
+/**
+ * Components
+ */
 import { Button } from './Button';
+/**
+ * Hooks
+ */
+import { useFoodCategory } from '../hooks/useFoodCategory';
+
+/**
+ * Interfaces
+ */
 
 interface SignatureOfferingsCardProps {
   image: string;
@@ -7,6 +21,7 @@ interface SignatureOfferingsCardProps {
   description: string;
   label: string;
   href: string;
+  category?: string;
   icon: ComponentType<{ className?: string }>;
 }
 
@@ -16,8 +31,10 @@ const SignatureOfferingsCard: FC<SignatureOfferingsCardProps> = ({
   description,
   label,
   href,
+  category,
   icon: Icon,
 }) => {
+  const { updateCategory } = useFoodCategory();
   return (
     <div className='signature-offerings-card'>
       <div className='card-label'>
@@ -37,8 +54,10 @@ const SignatureOfferingsCard: FC<SignatureOfferingsCardProps> = ({
         <h4 className='card-title'>{title}</h4>
         <p className='card-description'>{description}</p>
         <Button
+          onClick={() => category && updateCategory(category)}
+
           to={href}
-          classes='text-nowrap uppercase'
+          classes='text-sm font-montserrat gap-2 text-nowrap'
         >
           {label}
         </Button>

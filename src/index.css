@@ -49,6 +49,16 @@
   section:not(.hero) {
     @apply mb-16;
   }
+
+  ::-webkit-scrollbar {
+    @apply w-2 h-1 rounded-lg;
+  }
+  ::-webkit-scrollbar-track {
+    @apply rounded-lg bg-roma-beige;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-roma-red rounded-lg;
+  }
 }
 
 @layer components {
@@ -105,7 +115,7 @@
   * Button
   */
   .btn {
-    @apply h-10 px-10 rounded-lg flex items-center justify-center shadow-lg font-medium;
+    @apply h-10 px-10 rounded-lg flex items-center justify-center font-medium;
   }
   .btn.primary {
     @apply bg-roma-red text-white font-medium;
@@ -145,7 +155,7 @@
     @apply overflow-hidden rounded-lg bg-roma-cream relative;
   }
   .signature-offerings-card .card-label {
-    @apply absolute size-11 bg-white z-10 flex items-center justify-center right-6 top-6 rounded-full text-roma-red shadow-2xl
+    @apply absolute size-11 bg-white z-10 flex items-center justify-center right-6 top-6 rounded-full text-roma-red shadow-2xl;
   }
   .signature-offerings-card .card-banner {
     @apply max-h-72;
@@ -158,6 +168,25 @@
   }
   .signature-offerings-card .card-content .card-description {
     @apply text-roma-dark/80 my-3;
+  }
+
+  /**
+  * Product card
+  */
+  .product-card {
+    @apply rounded-lg overflow-hidden bg-white shadow-2xl;
+  }
+  .product-card .card-content {
+    @apply p-4 font-playfair;
+  }
+  .product-card .card-content .card-title {
+    @apply text-2xl font-bold;
+  }
+  .product-card .card-content .card-price {
+    @apply text-lg font-semibold text-roma-red flex items-center gap-0.5;
+  }
+  .product-card .card-content .card-description {
+    @apply my-3 text-roma-dark/80;
   }
 }
 

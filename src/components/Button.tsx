@@ -7,7 +7,6 @@ import type {
   FC,
   ReactNode,
 } from 'react';
-import { Link } from 'react-router-dom';
 
 /**
  * Interfaces
@@ -29,13 +28,13 @@ const Button: FC<ButtonProps> = ({
 }) => {
   if (to) {
     return (
-      <Link
-        to={to}
+      <a
+        href={to}
         className={`btn ${variant} ${classes}`}
         {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {children}
-      </Link>
+      </a>
     );
   } else {
     return (
@@ -65,13 +64,13 @@ const IconButton: FC<IconButtonProps> = ({
 }) => {
   if (to) {
     return (
-      <Link
-        to={to}
+      <a
+        href={to}
         className={`icon-btn ${variant} ${classes}`}
         {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {children}
-      </Link>
+      </a>
     );
   } else {
     return (
