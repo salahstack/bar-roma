@@ -1,7 +1,13 @@
 /**
  * Node modules
  */
-import type { ButtonHTMLAttributes, FC, ReactNode } from "react";
+import type {
+  ButtonHTMLAttributes,
+  AnchorHTMLAttributes,
+  FC,
+  ReactNode,
+} from 'react';
+import { Link } from 'react-router-dom';
 
 /**
  * Interfaces
@@ -10,21 +16,73 @@ import type { ButtonHTMLAttributes, FC, ReactNode } from "react";
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   classes?: string;
-  variant?: "primary" | "secondary";
+  variant?: 'primary' | 'secondary';
+  to?: string;
 }
 
-const Button: FC<ButtonProps> = ({ children, classes = '', variant = 'primary', ...rest }) => {
-  return <button className={`btn ${variant} ${classes}`} {...rest}>{children}</button>;
+const Button: FC<ButtonProps> = ({
+  children,
+  classes = '',
+  variant = 'primary',
+  to = '',
+  ...rest
+}) => {
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={`btn ${variant} ${classes}`}
+        {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
+        {children}
+      </Link>
+    );
+  } else {
+    return (
+      <button
+        className={`btn ${variant} ${classes}`}
+        {...rest}
+      >
+        {children}
+      </button>
+    );
+  }
 };
 
 interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   classes?: string;
-  variant?: 'primary' | 'secondary' | 'outline'
+  variant?: 'primary' | 'secondary' | 'outline';
+  to?: string;
 }
 
-const IconButton: FC<IconButtonProps> = ({ children, variant = 'primary', classes = "", ...rest }) => {
-  return <button className={`icon-btn ${variant} ${classes}`} {...rest}>{children}</button>;
+const IconButton: FC<IconButtonProps> = ({
+  children,
+  classes = '',
+  variant = 'primary',
+  to = '',
+  ...rest
+}) => {
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={`icon-btn ${variant} ${classes}`}
+        {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
+        {children}
+      </Link>
+    );
+  } else {
+    return (
+      <button
+        className={`icon-btn ${variant} ${classes}`}
+        {...rest}
+      >
+        {children}
+      </button>
+    );
+  }
 };
 
 export { Button, IconButton };

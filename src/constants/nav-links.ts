@@ -14,7 +14,7 @@ const navLinks: navLinksInterface[] = [
   },
   {
     label: 'Menu',
-    href: 'menu',
+    href: '#menu',
   },
   {
     label: 'Galleria',

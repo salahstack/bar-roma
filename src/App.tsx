@@ -4,19 +4,19 @@
 import About from "./components/About";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import SignatureOfferings from "./components/SignatureOfferings";
 
 function App() {
   return (
     <>
       {/* Header */}
       <Header />
-      {/* Header */}
       {/* Hero Section */}
         <Hero />
-      {/* Hero Section */}
       {/* About Section */}
       <About />
-      {/* About Section */}
+      {/* Signature Offerings Section */}
+      <SignatureOfferings />
     </>
   );
 }
