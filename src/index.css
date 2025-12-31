@@ -14,8 +14,8 @@
   --color-roma-beige: #f5f5dc;
   --color-roma-terracotta: #e07856;
   --color-roma-light-gray: #e8e8e8;
-    /* Bar Roma Animations */
-  --animate-slide-in: slide-in 500ms ease forwards
+  /* Bar Roma Animations */
+  --animate-slide-in: slide-in 500ms ease forwards;
 }
 
 /**
@@ -26,7 +26,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply text-roma-dark
+    @apply text-roma-dark;
   }
   a,
   img,
@@ -46,8 +46,8 @@
   .container {
     @apply mx-auto px-4 md:px-6;
   }
-  section {
-    @apply pb-8 md:pb-16;
+  section:not(.hero) {
+    @apply mb-16;
   }
 }
 
@@ -56,7 +56,7 @@
   * Header
   */
   .header {
-    @apply h-20 fixed left-0 top-0 w-full z-10;
+    @apply h-20 fixed left-0 top-0 w-full z-20;
   }
 
   .header.active {
@@ -67,16 +67,16 @@
   * Navbar
   */
   .navbar {
-    @apply absolute z-10 shadow-2xl transition-transform right-6 top-[calc(100%+4px)] md:block bg-roma-beige p-2 md:px-4 md:py-1 rounded-lg opacity-0 scale-0 invisible origin-top-right md:opacity-100 md:scale-100 md:visible md:static md:inset-auto
+    @apply absolute z-10 shadow-2xl transition-transform right-6 top-[calc(100%+4px)] md:block bg-roma-beige p-2 md:px-4 md:py-1 rounded-lg opacity-0 scale-0 invisible origin-top-right md:opacity-100 md:scale-100 md:visible md:static md:inset-auto;
   }
   .navbar.active {
-    @apply opacity-100 scale-100 visible
+    @apply opacity-100 scale-100 visible;
   }
   .navbar .navbar-list {
     @apply flex flex-col items-center gap-1 md:flex-row md:gap-3;
   }
   .navbar .navbar-list .navbar-link {
-    @apply px-2 py-2 text-roma-dark font-semibold duration-150 hover:text-roma-red/85 active:text-roma-red whitespace-nowrap relative after:absolute after:duration-150 after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-roma-red hover:after:w-full
+    @apply px-2 py-2 text-roma-dark font-semibold duration-150 hover:text-roma-red/85 active:text-roma-red whitespace-nowrap relative after:absolute after:duration-150 after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-roma-red hover:after:w-full;
   }
 
   /**
@@ -119,27 +119,47 @@
   */
 
   .tabs {
-    @apply pb-4 border-b border-b-roma-gray/20 md:pb-0 md:border-none
+    @apply pb-4 border-b border-b-roma-gray/20 md:pb-0 md:border-none;
   }
   .tab-panel {
-    @apply opacity-0 scale-0 transition-all
-    
+    @apply opacity-0 scale-0 transition-all;
   }
   .tab-panel.active {
-    @apply opacity-100 scale-100
+    @apply opacity-100 scale-100;
   }
 
   /**
   * Tab button
   */
   .tab-button {
-    @apply font-medium opacity-65 font-playfair
+    @apply font-medium opacity-65 font-playfair;
   }
   .tab-button.active {
-    @apply opacity-100 border-b-3 border-b-roma-gold
+    @apply opacity-100 border-b-3 border-b-roma-gold;
+  }
+
+  /**
+  * Signature offerings card
+  */
+  .signature-offerings-card {
+    @apply overflow-hidden rounded-lg bg-roma-cream relative;
+  }
+  .signature-offerings-card .card-label {
+    @apply absolute size-11 bg-white z-10 flex items-center justify-center right-6 top-6 rounded-full text-roma-red shadow-2xl
+  }
+  .signature-offerings-card .card-banner {
+    @apply max-h-72;
+  }
+  .signature-offerings-card .card-content {
+    @apply p-4 text-center font-playfair;
+  }
+  .signature-offerings-card .card-content .card-title {
+    @apply text-2xl font-bold uppercase;
+  }
+  .signature-offerings-card .card-content .card-description {
+    @apply text-roma-dark/80 my-3;
   }
 }
-
 
 /**
 * UTILITIES
@@ -147,10 +167,10 @@
 
 @layer utilities {
   .img-cover {
-    @apply w-full h-full object-cover
+    @apply w-full h-full object-cover;
   }
   .img-box {
-    @apply overflow-hidden 
+    @apply overflow-hidden;
   }
 
   @keyframes slide-in {
@@ -158,7 +178,7 @@
       transform: translateY(-100%);
     }
     to {
-      transform: translateY(0)
+      transform: translateY(0);
     }
   }
 }

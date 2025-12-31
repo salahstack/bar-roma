@@ -12,10 +12,10 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ links, isOpen }) => {
   return (
-    <nav className={`navbar ${isOpen && 'active'}`}>
+    <nav className={`navbar ${isOpen ? 'active' : ''}`}>
       <ul className='navbar-list'>
-        {links.map(({ label, href }) => (
-          <li>
+        {links.map(({ label, href }, index) => (
+          <li key={index}>
             <a href={href} className='navbar-link'>{label}</a>
           </li>
         ))}

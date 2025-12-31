@@ -1,8 +1,14 @@
-import { useState, type FC, type ReactNode } from 'react';
+import { useState, type FC, type ReactElement } from 'react';
+
+
+interface TabChildProps {
+  label: string;
+}
 
 interface TabsProps {
-  children: ReactNode[];
+  children: ReactElement<TabChildProps>[];
 }
+
 
 const Tabs: FC<TabsProps> = ({ children }) => {
   const [activeTab, setActiveTab] = useState(0);

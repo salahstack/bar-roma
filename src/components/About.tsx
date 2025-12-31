@@ -6,9 +6,10 @@ import Tab from './Tab';
 const About = () => {
   const date = new Date();
   const currentYear = date.getFullYear();
+  const history = currentYear - 1908;
   return (
     <section
-      className='section bg-roma-cream'
+      className='section bg-roma-cream pb-7'
       id='la-nostra-storia'
     >
       <div className='container'>
@@ -27,10 +28,10 @@ const About = () => {
         {/*  */}
         <div className='grid grid-col md:grid-cols-2 gap-4'>
           <Tabs>
-            <Tab label='1905'>
+            <Tab label='1908'>
               <figure className='img-box rounded-xl h-72 relative border-2 border-roma-gold'>
                 <span className='absolute left-0 top-0 bg-roma-red text-white rounded-md h-8 px-2 flex items-center justify-center text-sm font-semibold'>
-                  EST. 1905
+                  EST. 1908
                 </span>
                 <img
                   src='/images/bar-roma-1905.webp'
@@ -96,7 +97,7 @@ const About = () => {
               La nostra eredità
             </p>
             <h2 className='font-playfair text-5xl font-bold relative after:absolute after:w-28 after:h-1 after:rounded-lg after:bg-roma-gold after:left-1/2 after:-translate-x-1/2 after:-bottom-7'>
-              115 Anni di Storia
+              {history}  Anni di Storia
             </h2>
             <q className='font-playfair text-roma-dark/60 font-semibold text-xl text-center block mt-14 mb-4 italic'>
               Un'eredità di Eccellenza Italiana
