@@ -17,6 +17,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   classes?: string;
   variant?: 'primary' | 'secondary';
   to?: string;
+  target?: string;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -24,6 +25,7 @@ const Button: FC<ButtonProps> = ({
   classes = '',
   variant = 'primary',
   to = '',
+  target = '_self',
   ...rest
 }) => {
   if (to) {
@@ -31,6 +33,7 @@ const Button: FC<ButtonProps> = ({
       <a
         href={to}
         className={`btn ${variant} ${classes}`}
+        target={target}
         {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {children}
@@ -53,6 +56,7 @@ interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   classes?: string;
   variant?: 'primary' | 'secondary' | 'outline';
   to?: string;
+  target?: string;
 }
 
 const IconButton: FC<IconButtonProps> = ({
@@ -60,6 +64,7 @@ const IconButton: FC<IconButtonProps> = ({
   classes = '',
   variant = 'primary',
   to = '',
+  target = '_self',
   ...rest
 }) => {
   if (to) {
@@ -67,6 +72,7 @@ const IconButton: FC<IconButtonProps> = ({
       <a
         href={to}
         className={`icon-btn ${variant} ${classes}`}
+        target={target}
         {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {children}

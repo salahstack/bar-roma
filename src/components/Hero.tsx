@@ -26,7 +26,7 @@ const Hero = () => {
           </h1>
         </div>
         <div className='mt-6 w-full relative z-1 md:flex items-center gap-4 md:max-w-lg md:mx-auto'>
-          <Button>Prenota ora</Button>
+          <Button classes='text-nowrap'>Ordina su Deliveroo</Button>
           <Button
             classes='mt-4 md:mt-0 gap-3'
             to='#menu'
