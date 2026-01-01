@@ -26,7 +26,7 @@ const signatureOfferingsData = [
       'Immergiti nel nostro spazio caldo e accogliente, pensato per conversazioni memorabili.',
     image: '/images/space.webp',
     label: 'Scopri il nostro spazio',
-    href: '#spazio',
+    href: '#galleria',
     icon: House,
   },
 ];

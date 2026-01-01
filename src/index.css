@@ -158,7 +158,7 @@
     @apply absolute size-11 bg-white z-10 flex items-center justify-center right-6 top-6 rounded-full text-roma-red shadow-2xl;
   }
   .signature-offerings-card .card-banner {
-    @apply max-h-72;
+    @apply max-h-64;
   }
   .signature-offerings-card .card-content {
     @apply p-4 text-center font-playfair;
@@ -176,8 +176,11 @@
   .product-card {
     @apply rounded-lg overflow-hidden bg-white shadow-2xl;
   }
+  .product-card .card-banner {
+    @apply max-h-64;
+  }
   .product-card .card-content {
-    @apply p-4 font-playfair;
+    @apply p-3 font-playfair;
   }
   .product-card .card-content .card-title {
     @apply text-2xl font-bold;
@@ -186,7 +189,13 @@
     @apply text-lg font-semibold text-roma-red flex items-center gap-0.5;
   }
   .product-card .card-content .card-description {
-    @apply my-3 text-roma-dark/80;
+    @apply mt-2 text-roma-gray;
+  }
+  /**
+  * Gallery Card
+  */
+  .gallery-card {
+    @apply rounded-3xl h-84;
   }
 }
 

@@ -3,13 +3,9 @@
  */
 import type { FC } from 'react';
 /**
- * Components
- */
-import { Button } from './Button';
-/**
  * Icons
  */
-import { Euro, Plus } from 'lucide-react';
+import { Euro } from 'lucide-react';
 /**
  * Interfaces
  */
@@ -42,12 +38,14 @@ const ProductCard: FC<ProductCardProps> = ({
       <div className='card-content'>
         <div className='flex items-center justify-between gap-3'>
           <h4 className='card-title'>{title}</h4>
-          <span className='card-price'>{price} <Euro size={18} /></span>
+          <span className='card-price'>
+            {price} <Euro size={18} />
+          </span>
         </div>
         <p className='card-description'>{description}</p>
-        <Button classes='text-xs font-montserrat gap-2 text-nowrap'>
+        {/* <Button classes='text-xs font-montserrat gap-2 text-nowrap'>
           <Plus /> AGGIUNGERE AL CARRELLO
-        </Button>
+        </Button> */}
       </div>
     </div>
   );
