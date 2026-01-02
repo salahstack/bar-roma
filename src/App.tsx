@@ -2,6 +2,7 @@
  * Components
  */
 import About from './components/About';
+import Delivery from './components/Delivery';
 import Gallery from './components/Gallery';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -26,6 +27,8 @@ function App() {
       <Gallery />
       {/* Testimonials */}
       <Testimonials />
+      {/* Delivery */}
+      <Delivery />
     </>
   );
 }
