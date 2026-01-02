@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Menu from './components/Menu';
 import SignatureOfferings from './components/SignatureOfferings';
+import Testimonials from './components/Testimonials';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
       <Menu />
       {/* Gallery */}
       <Gallery />
+      {/* Testimonials */}
+      <Testimonials />
     </>
   );
 }

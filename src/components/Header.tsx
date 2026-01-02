@@ -24,7 +24,7 @@ const Header = () => {
     <header className={`header ${isScrolling ? 'active' : ''}`}>
       <div className='container flex items-center justify-between gap-4 h-full relative'>
         <a href='#casa'>
-          <h1 className='text-3xl font-playfair font-medium text-white whitespace-nowrap'>
+          <h1 className='text-xl md:text-3xl font-playfair font-medium text-white whitespace-nowrap'>
             Bar Roma
           </h1>
           <span className='font-cormorant text-roma-gold font-bold'>Dal 1908</span>
