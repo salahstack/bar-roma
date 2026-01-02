@@ -1,3 +1,9 @@
+@layer swiper {
+  @import 'swiper/css';
+  @import 'swiper/css/pagination';
+  @import 'swiper/css/navigation';
+}
+
 @import 'tailwindcss';
 
 @theme {
@@ -105,6 +111,9 @@
   .icon-btn {
     @apply size-10 flex items-center justify-center rounded-full;
   }
+  .icon-btn.primary {
+    @apply bg-roma-gold hover:bg-roma-gold/85 text-white
+  }
   .icon-btn.secondary {
     @apply hover:bg-roma-gold/30 hover:text-roma-dark/70;
   }
@@ -196,6 +205,37 @@
   */
   .gallery-card {
     @apply rounded-3xl h-84;
+  }
+  /**
+  * Testimonials card
+  */
+  .review-card {
+    @apply rounded-4xl bg-roma-cream p-6 w-full max-w-96 mx-auto;
+  }
+  .review-card .review-text {
+    @apply text-center mt-4 font-playfair text-lg font-medium;
+  }
+  .review-card .card-stars {
+    @apply flex items-center  gap-2 justify-center my-4;
+  }
+  .review-card .card-metadata {
+    @apply text-center;
+  }
+  .review-card .card-metadata .reviewer-name {
+    @apply font-medium mb-2;
+  }
+  .review-card .card-metadata .review-source {
+    @apply text-gray-400 text-xs font-medium;
+  }
+  .swiper-pagination {
+    @apply static flex items-center justify-center gap-2 mt-3;
+  }
+
+  .swiper-pagination-bullet {
+    @apply size-3 bg-roma-beige opacity-100;
+  }
+  .swiper-pagination-bullet-active {
+    @apply bg-roma-red
   }
 }
 

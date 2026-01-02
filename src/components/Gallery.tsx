@@ -45,8 +45,11 @@ const Gallery = () => {
             <p className='text-roma-gold text-xl'>@barroma</p>
           </div>
           <div className='w-full max-w-96 grid grid-cols-3 gap-2 mx-auto mb-4'>
-            {galleryData.map((item) => (
-              <figure className='img-box'>
+            {galleryData.map((item, key) => (
+              <figure
+                className='img-box'
+                key={key}
+              >
                 <img
                   src={item}
                   alt='gallery'
@@ -58,7 +61,7 @@ const Gallery = () => {
           </div>
           <Button
             to='https://www.instagram.com/bar_roma_nocera_inferiore/'
-            target="_blank"
+            target='_blank'
             classes='gap-4 w-fit rounded-xl mx-auto'
           >
             <Camera /> Seguici su instgram
