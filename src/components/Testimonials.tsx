@@ -1,11 +1,21 @@
+/**
+ * Icons
+ */
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+/**
+ * Swiper
+ */
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-
-import { reviewsData } from '../constants/reviews-data';
+/**
+ * Components
+ */
 import ReviewCard from './ReviewCard';
 import { IconButton } from './Button';
+/**
+ * Constants
+ */
+import { reviewsData } from '../constants/reviews-data';
 
 const Testimonials = () => {
   return (
