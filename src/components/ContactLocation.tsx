@@ -44,17 +44,17 @@ const ContactLocation = () => {
 
         <div className='p-5 bg-white rounded-xl'>
           <h4 className='text-2xl font-semibold leading-9 border-b-2 border-b-roma-gold mb-8 w-fit'>
-            informazioni sui contatti
+            Informazioni sui contatti
           </h4>
           <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            <li className='flex items-center gap-4'>
+            <li className='flex items-center justify-center gap-4'>
               <Store className=' text-roma-gold' />
               <address className='not-italic font-medium'>
                 {' '}
                 Via Giuseppe Garibaldi, 13, 84014 Nocera Inferiore SA
               </address>
             </li>
-            <li className='flex items-center gap-4'>
+            <li className='flex items-center justify-center gap-4'>
               <Phone className=' text-roma-gold' />
               <div>
                 <span className='not-italic font-medium'> 081 517 6727</span>
@@ -64,7 +64,7 @@ const ContactLocation = () => {
               </div>
             </li>
 
-            <li className='flex items-center gap-4'>
+            <li className='flex items-center justify-center gap-4'>
               <Motorbike className=' text-roma-gold' />
               <Button
                 classes='text-nowrap'
@@ -113,7 +113,7 @@ const ContactLocation = () => {
               ))}
             </ul>
           </div>
-          <div className='flex flex-col gap-3 mt-4'>
+          <div className='flex flex-col gap-3 mt-4 w-full max-w-md mx-auto'>
             <Button
               classes='gap-4'
               to='https://www.google.com/maps/dir/?api=1&destination=40.74721,14.64332'
