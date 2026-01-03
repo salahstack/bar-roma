@@ -4,6 +4,10 @@
   @import 'swiper/css/navigation';
 }
 
+@layer leaflet {
+  @import 'leaflet/dist/leaflet.css';
+}
+
 @import 'tailwindcss';
 
 @theme {
@@ -72,7 +76,7 @@
   * Header
   */
   .header {
-    @apply h-20 fixed left-0 top-0 w-full z-20;
+    @apply h-20 fixed left-0 top-0 w-full z-[2000];
   }
 
   .header.active {

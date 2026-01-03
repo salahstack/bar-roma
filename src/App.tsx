@@ -2,6 +2,7 @@
  * Components
  */
 import About from './components/About';
+import ContactLocation from './components/ContactLocation';
 import Delivery from './components/Delivery';
 import Gallery from './components/Gallery';
 import Header from './components/Header';
@@ -29,6 +30,8 @@ function App() {
       <Testimonials />
       {/* Delivery */}
       <Delivery />
+      {/* Contact And Location */}
+      <ContactLocation />
     </>
   );
 }
