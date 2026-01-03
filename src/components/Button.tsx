@@ -25,7 +25,7 @@ const Button: FC<ButtonProps> = ({
   classes = '',
   variant = 'primary',
   to = '',
-  target = '_self',
+  target = '_blank',
   ...rest
 }) => {
   if (to) {
@@ -64,7 +64,7 @@ const IconButton: FC<IconButtonProps> = ({
   classes = '',
   variant = 'primary',
   to = '',
-  target = '_self',
+  target = '_blank',
   ...rest
 }) => {
   if (to) {
