@@ -28,7 +28,7 @@ const ContactLocation = () => {
   const currentDayIndex = (date.getDay() + 6) % 7;
   return (
     <section
-      className='section bg-roma-cream py-7 mb-0'
+      className='section bg-roma-cream py-7 mb-0 reveal-up'
       id='contatti'
     >
       <div className='container'>
@@ -36,14 +36,14 @@ const ContactLocation = () => {
           <p className='uppercase text-roma-gold text-md font-playfair font-medium mb-2'>
             Visitaci
           </p>
-          <h2 className='font-playfair text-5xl font-bold'>trova Bar Roma</h2>
+          <h2 className='font-playfair text-5xl font-bold reveal-up'>trova Bar Roma</h2>
         </div>
         {/* Map */}
         <MapWithDirections />
         {/* Map */}
 
         <div className='p-5 bg-white rounded-xl'>
-          <h4 className='text-2xl font-semibold leading-9 border-b-2 border-b-roma-gold mb-8 w-fit'>
+          <h4 className='text-2xl font-semibold leading-9 border-b-2 border-b-roma-gold mb-8 w-fit reveal-up'>
             Informazioni sui contatti
           </h4>
           <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>

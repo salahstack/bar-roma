@@ -19,13 +19,13 @@ import { reviewsData } from '../constants/reviews-data';
 
 const Testimonials = () => {
   return (
-    <section className='section'>
+    <section className='section reveal-up'>
       <div className='container'>
         <div className='text-center'>
           <p className='uppercase text-roma-gold text-md font-playfair font-medium mb-2'>
             Recensioni degli ospiti
           </p>
-          <h2 className='font-playfair text-5xl font-bold relative after:absolute after:w-28 after:h-1 after:rounded-lg after:bg-roma-gold after:left-1/2 after:-translate-x-1/2 after:-bottom-7'>
+          <h2 className='font-playfair text-5xl font-bold relative after:absolute after:w-28 after:h-1 after:rounded-lg after:bg-roma-gold after:left-1/2 after:-translate-x-1/2 after:-bottom-7 reveal-up'>
             Cosa dicono i nostri ospiti
           </h2>
         </div>

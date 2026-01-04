@@ -76,7 +76,7 @@
   * Header
   */
   .header {
-    @apply h-20 fixed left-0 top-0 w-full z-[2000];
+    @apply h-20 fixed left-0 top-0 w-full z-2000;
   }
 
   .header.active {
@@ -116,7 +116,7 @@
     @apply size-10 flex items-center justify-center rounded-full;
   }
   .icon-btn.primary {
-    @apply bg-roma-gold hover:bg-roma-gold/85 text-white
+    @apply bg-roma-gold hover:bg-roma-gold/85 text-white;
   }
   .icon-btn.secondary {
     @apply hover:bg-roma-gold/30 hover:text-roma-dark/70;
@@ -171,7 +171,7 @@
     @apply absolute size-11 bg-white z-10 flex items-center justify-center right-6 top-6 rounded-full text-roma-red shadow-2xl;
   }
   .signature-offerings-card .card-banner {
-    @apply max-h-64;
+    @apply max-h-54;
   }
   .signature-offerings-card .card-content {
     @apply p-4 text-center font-playfair;
@@ -239,7 +239,7 @@
     @apply size-3 bg-roma-beige opacity-100;
   }
   .swiper-pagination-bullet-active {
-    @apply bg-roma-red
+    @apply bg-roma-red;
   }
 }
 
@@ -262,5 +262,9 @@
     to {
       transform: translateY(0);
     }
+  }
+
+  .reveal-up {
+    @apply opacity-0 translate-y-20;
   }
 }
