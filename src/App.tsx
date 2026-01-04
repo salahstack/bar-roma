@@ -4,6 +4,7 @@
 import About from './components/About';
 import ContactLocation from './components/ContactLocation';
 import Delivery from './components/Delivery';
+import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -32,6 +33,8 @@ function App() {
       <Delivery />
       {/* Contact And Location */}
       <ContactLocation />
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

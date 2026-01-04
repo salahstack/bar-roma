@@ -9,7 +9,7 @@ import {
   Motorbike,
   Phone,
   Send,
-  Store,
+  MapPin,
   Wifi,
 } from 'lucide-react';
 /**
@@ -28,7 +28,7 @@ const ContactLocation = () => {
   const currentDayIndex = (date.getDay() + 6) % 7;
   return (
     <section
-      className='section bg-roma-cream py-7'
+      className='section bg-roma-cream py-7 mb-0'
       id='contatti'
     >
       <div className='container'>
@@ -48,7 +48,7 @@ const ContactLocation = () => {
           </h4>
           <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             <li className='flex items-center lg:justify-center gap-4'>
-              <Store className=' text-roma-gold' />
+              <MapPin className=' text-roma-gold' />
               <address className='not-italic font-medium'>
                 {' '}
                 Via Giuseppe Garibaldi, 13, 84014 Nocera Inferiore SA
@@ -59,7 +59,7 @@ const ContactLocation = () => {
               <div>
                 <span className='not-italic font-medium'> 081 517 6727</span>
                 <span className='block text-sm text-gray-500 mt-2'>
-                  Disponibile 25h
+                  Disponibile 24h
                 </span>
               </div>
             </li>
