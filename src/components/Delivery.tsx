@@ -9,13 +9,13 @@ import { Button } from './Button';
 
 const Delivery = () => {
   return (
-    <section className='section'>
+    <section className='section reveal-up'>
       <div className='container'>
         <div className='text-center'>
           <p className='uppercase text-roma-gold text-md font-playfair font-medium mb-2'>
             CONSEGNATO A CASA TUA
           </p>
-          <h2 className='font-playfair text-5xl font-bold relative after:absolute after:w-28 after:h-1 after:rounded-lg after:bg-roma-gold after:left-1/2 after:-translate-x-1/2 after:-bottom-7'>
+          <h2 className='font-playfair text-5xl font-bold relative after:absolute after:w-28 after:h-1 after:rounded-lg after:bg-roma-gold after:left-1/2 after:-translate-x-1/2 after:-bottom-7 reveal-up'>
             Il Bar Roma arriva da te
           </h2>
         </div>

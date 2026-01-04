@@ -23,6 +23,7 @@ interface SignatureOfferingsCardProps {
   href: string;
   category?: string;
   icon: ComponentType<{ className?: string }>;
+  classes?: string
 }
 
 const SignatureOfferingsCard: FC<SignatureOfferingsCardProps> = ({
@@ -33,10 +34,11 @@ const SignatureOfferingsCard: FC<SignatureOfferingsCardProps> = ({
   href,
   category,
   icon: Icon,
+  classes = ''
 }) => {
   const { updateCategory } = useFoodCategory();
   return (
-    <div className='signature-offerings-card'>
+    <div className={`signature-offerings-card  ${classes}`}>
       <div className='card-label'>
         <Icon />
       </div>

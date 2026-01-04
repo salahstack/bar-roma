@@ -15,6 +15,7 @@ interface ProductCardProps {
   title: string;
   price: number;
   description: string;
+  classes?: string;
 }
 
 const ProductCard: FC<ProductCardProps> = ({
@@ -22,9 +23,10 @@ const ProductCard: FC<ProductCardProps> = ({
   title,
   price,
   description,
+  classes = ''
 }) => {
   return (
-    <div className='product-card'>
+    <div className={`product-card ${classes}`}>
       <figure className='img-box card-banner'>
         <img
           src={image}
