@@ -1,7 +1,21 @@
+/**
+ * Node modules
+ */
 import type { FC } from 'react';
+/**
+ * Constants
+ */
 import { navLinks } from '../constants/nav-links';
+/**
+ * Components
+ */
 import { IconButton } from './Button';
+/**
+ * Icons
+ */
 import { Copyright, Facebook, Instagram, MapPin, Phone } from 'lucide-react';
+
+
 const Footer: FC = () => {
   return (
     <footer className='bg-roma-dark py-10'>
