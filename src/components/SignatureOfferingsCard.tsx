@@ -53,7 +53,7 @@ const SignatureOfferingsCard: FC<SignatureOfferingsCardProps> = ({
         />
       </figure>
       <div className='card-content '>
-        <h4 className='card-title'>{title}</h4>
+        <h3 className='card-title'>{title}</h3>
         <p className='card-description'>{description}</p>
         <Button
           onClick={() => category && updateCategory(category)}

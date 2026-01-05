@@ -1,5 +1,6 @@
-import { ArrowLeft } from 'lucide-react';
-import { IconButton } from './Button';
+/**
+ * Components
+ */
 import Tabs from './Tabs';
 import Tab from './Tab';
 
@@ -9,21 +10,13 @@ const About = () => {
   const history = currentYear - 1908;
   return (
     <section
-      className='section bg-roma-cream pb-7 reveal-up'
+      className='section bg-roma-cream py-7 reveal-up'
       id='la-nostra-storia'
     >
       <div className='container'>
-        <div className='flex item-center gap-4 py-10'>
-          <IconButton
-            variant='secondary'
-            aria-label='tornare a casa'
-          >
-            <ArrowLeft aria-hidden='true' />
-          </IconButton>
-          <h3 className='text-2xl font-playfair font-semibold mx-auto'>
-            Chi siamo / Storia
-          </h3>
-        </div>
+        <h2 className='font-playfair text-5xl font-bold mb-7 text-center reveal-up'>
+          Chi siamo / Storia
+        </h2>
 
         {/*  */}
         <div className='grid grid-col md:grid-cols-2 gap-4'>
@@ -96,9 +89,9 @@ const About = () => {
             <p className='uppercase text-roma-gold text-md font-playfair font-medium mb-2'>
               La nostra eredità
             </p>
-            <h2 className='font-playfair text-5xl font-bold relative after:absolute after:w-28 after:h-1 after:rounded-lg after:bg-roma-gold after:left-1/2 after:-translate-x-1/2 after:-bottom-7'>
-              {history}  Anni di Storia
-            </h2>
+            <h3 className='font-playfair text-3xl font-semibold relative after:absolute after:w-28 after:h-1 after:rounded-lg after:bg-roma-gold after:left-1/2 after:-translate-x-1/2 after:-bottom-7'>
+              {history} Anni di Storia
+            </h3>
             <q className='font-playfair text-roma-dark/60 font-semibold text-xl text-center block mt-14 mb-4 italic'>
               Un'eredità di Eccellenza Italiana
             </q>

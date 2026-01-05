@@ -59,11 +59,23 @@ const Testimonials = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <IconButton classes='swiper-button-prev-custom absolute left-0 md:left-10 lg:left-22 xl:left-40 top-[calc(50%-24px)] -translate-y-1/2 z-10 disabled:opacity-40 disabled:pointer-events-none'>
-            <ChevronLeft className='w-6 h-6' />
+          <IconButton
+            classes='swiper-button-prev-custom absolute left-0 md:left-10 lg:left-22 xl:left-40 top-[calc(50%-24px)] -translate-y-1/2 z-10 disabled:opacity-40 disabled:pointer-events-none'
+            aria-label='Recensione precedente'
+          >
+            <ChevronLeft
+              className='w-6 h-6'
+              aria-hidden='true'
+            />
           </IconButton>
-          <IconButton classes='swiper-button-next-custom absolute right-0 md:right-10 lg:right-22 xl:right-40 top-[calc(50%-24px)] -translate-y-1/2 z-10 disabled:opacity-40 disabled:pointer-events-none'>
-            <ChevronRight className='w-6 h-6' />
+          <IconButton
+            classes='swiper-button-next-custom absolute right-0 md:right-10 lg:right-22 xl:right-40 top-[calc(50%-24px)] -translate-y-1/2 z-10 disabled:opacity-40 disabled:pointer-events-none'
+            aria-label='Recensione successiva'
+          >
+            <ChevronRight
+              className='w-6 h-6'
+              aria-hidden='true'
+            />
           </IconButton>
         </div>
       </div>
