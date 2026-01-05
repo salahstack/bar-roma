@@ -12,7 +12,7 @@ import { menuCategoriesData } from '../constants/menu-categories-data';
 const Menu = () => {
   return (
     <section
-      className='section bg-roma-cream py-5 reveal-up'
+      className='section bg-roma-cream py-5'
       id='menu'
     >
       <div className='container'>

@@ -59,7 +59,7 @@ const Products: FC<ProductsProps> = ({ products }) => {
           )
         )}
       </div>
-      {filteredProducts.length > 6 && (
+      {filteredProducts.length > 6 && !showAll && (
         <Button
           classes='mt-5 w-full max-w-sm mx-auto'
           onClick={handleShowAll}

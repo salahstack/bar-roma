@@ -23,6 +23,13 @@ const productsData = [
   },
   {
     image: '/images/drinks.webp',
+    title: 'Salsiccia e Friarielli',
+    price: 6.5,
+    description: 'Classico napoletano',
+    category: 'Panini',
+  },
+  {
+    image: '/images/drinks.webp',
     title: 'Panino con Pollo',
     price: 5,
     description: 'Pollo grigliato e verdure fresche',
@@ -219,7 +226,7 @@ const productsData = [
     category: 'Bevande',
   },
 
-    {
+  {
     image: '/images/drinks.webp',
     title: 'Sprite',
     price: 2.5,
@@ -241,7 +248,7 @@ const productsData = [
     category: 'Birre',
   },
 
-    {
+  {
     image: '/images/drinks.webp',
     title: 'Sprite',
     price: 2.5,
