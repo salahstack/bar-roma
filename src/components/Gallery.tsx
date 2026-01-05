@@ -41,7 +41,7 @@ const Gallery = () => {
         </div>
         <div className='mt-8'>
           <div className='text-center font-playfair mb-5'>
-            <h3 className='text-4xl font-bold'>Segui il nostro viaggio</h3>
+            <h3 className='text-3xl font-semibold'>Segui il nostro viaggio</h3>
             <p className='text-roma-gold text-xl'>@barroma</p>
           </div>
           <div className='w-full max-w-96 grid grid-cols-3 gap-2 mx-auto mb-4'>

@@ -18,14 +18,18 @@ const Hero = () => {
           <p className='text-roma-gold uppercase font-montserrat font-medium'>
             AUTENTICA ESPERIENZA DI CAFFÈ ITALIANO
           </p>
-          <h1 className='font-playfair text-white text-5xl font-medium mt-4'>
-            Dove La Tradizione
-          </h1>
-          <h1 className='font-playfair text-roma-gold text-3xl italic font-semibold'>
-            Incontra Il Gusto
-          </h1>
-          <h1 className='font-cormorant text-white text-5xl font-bold'>
-            Dal 1908
+          <h1>
+            <span className='block font-playfair text-white text-5xl font-medium mt-4'>
+              Dove La Tradizione
+            </span>
+
+            <span className='block font-playfair text-roma-gold text-3xl italic font-semibold mt-2'>
+              Incontra Il Gusto
+            </span>
+
+            <span className='block font-cormorant text-white text-5xl font-bold mt-2'>
+              Dal 1908
+            </span>
           </h1>
         </div>
         <div className='mt-6 w-full relative z-1 md:flex items-center gap-4 md:max-w-lg md:mx-auto'>

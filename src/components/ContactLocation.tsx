@@ -43,9 +43,9 @@ const ContactLocation = () => {
         {/* Map */}
 
         <div className='p-5 bg-white rounded-xl'>
-          <h4 className='text-2xl font-semibold leading-9 border-b-2 border-b-roma-gold mb-8 w-fit reveal-up'>
+          <h3 className='text-2xl font-semibold leading-9 border-b-2 border-b-roma-gold mb-8 w-fit reveal-up'>
             Informazioni sui contatti
-          </h4>
+          </h3>
           <ul className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             <li className='flex items-center lg:justify-center gap-4'>
               <MapPin className=' text-roma-gold' />
@@ -75,20 +75,20 @@ const ContactLocation = () => {
             </li>
           </ul>
           <div className='mt-4'>
-            <h4 className='text-2xl font-semibold leading-9 border-b-2 border-b-roma-gold mb-8 w-fit'>
+            <h3 className='text-2xl font-semibold leading-9 border-b-2 border-b-roma-gold mb-8 w-fit'>
               Seguici su:
-            </h4>
+            </h3>
             <div className='flex items-center gap-4'>
-              <IconButton to='https://www.instagram.com/bar_roma_nocera_inferiore'>
+              <IconButton to='https://www.instagram.com/bar_roma_nocera_inferiore' aria-label='seguici su Instgram'>
                 <Instagram />
               </IconButton>
-              <IconButton to='https://www.facebook.com/barromanocera'>
+              <IconButton to='https://www.facebook.com/barromanocera' aria-label='seguici su Facebook'>
                 <Facebook />
               </IconButton>
             </div>
           </div>
           <div className='mt-4'>
-            <h5 className='text-xl font-semibold mb-4'>Orari di apertura</h5>
+            <h4 className='text-2xl font-semibold mb-4'>Orari di apertura</h4>
             <ul className='grid grid-cols-1 gap-2'>
               {openingHours.map(({ day, open, close, status }, index) => (
                 <li

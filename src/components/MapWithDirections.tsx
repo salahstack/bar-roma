@@ -48,6 +48,8 @@ const MapWithDirections: FC = () => {
         <Marker
           position={SHOP_POSITION}
           icon={customMarker}
+          keyboard={true}
+          title='Bar Roma, clicca per le indicazioni'
         >
           <Popup>
             <strong>Bar Roma</strong>

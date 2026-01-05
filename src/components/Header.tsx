@@ -1,7 +1,7 @@
 /**
  * Components
  */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { IconButton } from './Button';
 import Navbar from './Navbar';
 /**
@@ -19,14 +19,24 @@ const Header = () => {
 
   const handleToggle = () => setIsOpen((prev) => !prev);
 
-  window.addEventListener('scroll', () => setIsScrolling(scrollY > 50));
+
+  useEffect(() => {
+    // scroll function
+    const handleScroll = () => setIsScrolling(scrollY > 50);
+
+      // link scroll function to scroll event
+    window.addEventListener('scroll', handleScroll);
+
+    // clean up function
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [])
   return (
     <header className={`header ${isScrolling ? 'active' : ''}`}>
       <div className='container flex items-center justify-between gap-4 h-full relative'>
-        <a href='#casa'>
-          <h1 className='text-xl md:text-3xl font-playfair font-medium text-white whitespace-nowrap'>
+        <a href='#casa' aria-label="Bar Roma, Dal 1908, casa link">
+          <div className='text-xl md:text-3xl font-playfair font-medium text-white whitespace-nowrap'>
             Bar Roma
-          </h1>
+          </div>
           <span className='font-cormorant text-roma-gold font-bold'>Dal 1908</span>
         </a>
         <Navbar

@@ -28,10 +28,10 @@ const Footer: FC = () => {
             città. Tradizione servita quotidianamente.
           </p>
           <div className='flex items-center gap-4 mt-5'>
-            <IconButton to='https://www.instagram.com/bar_roma_nocera_inferiore' classes='reveal-up-footer'>
+            <IconButton to='https://www.instagram.com/bar_roma_nocera_inferiore' classes='reveal-up-footer' aria-label='seguici su Instgram'>
               <Instagram />
             </IconButton>
-            <IconButton to='https://www.facebook.com/barromanocera' classes='reveal-up-footer'>
+            <IconButton to='https://www.facebook.com/barromanocera' classes='reveal-up-footer' aria-label='seguici su Facebook'>
               <Facebook />
             </IconButton>
           </div>

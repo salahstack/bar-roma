@@ -41,7 +41,7 @@ const ProductCard: FC<ProductCardProps> = ({
       </div>
       <div className='card-content'>
         <div className='flex items-center justify-between gap-3'>
-          <h4 className='card-title'>{title}</h4>
+          <h3 className='card-title'>{title}</h3>
           <span className='card-price'>
             {price} <Euro size={18} />
           </span>
