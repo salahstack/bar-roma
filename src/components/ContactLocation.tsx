@@ -28,7 +28,7 @@ const ContactLocation = () => {
   const currentDayIndex = (date.getDay() + 6) % 7;
   return (
     <section
-      className='section bg-roma-cream py-7 mb-0 reveal-up'
+      className='section bg-roma-cream py-7 mb-0'
       id='contatti'
     >
       <div className='container'>

@@ -54,7 +54,7 @@ const Products: FC<ProductsProps> = ({ products }) => {
               description={description}
               price={price}
               key={index}
-              // classes='reveal-up'
+              classes='reveal-up'
             />
           )
         )}

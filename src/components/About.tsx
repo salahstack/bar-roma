@@ -9,7 +9,7 @@ const About = () => {
   const history = currentYear - 1908;
   return (
     <section
-      className='section bg-roma-cream pb-7'
+      className='section bg-roma-cream pb-7 reveal-up'
       id='la-nostra-storia'
     >
       <div className='container'>
