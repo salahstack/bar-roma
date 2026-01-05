@@ -1,7 +1,7 @@
 /**
  * Node modules
  */
-import { useEffect, useState, type FC } from 'react';
+import { useState, type FC } from 'react';
 /**
  * Components
  */
