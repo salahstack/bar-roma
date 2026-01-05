@@ -27,6 +27,7 @@ const ProductCard: FC<ProductCardProps> = ({
 }) => {
   return (
     <div className={`product-card ${classes}`}>
+      <div>
       <figure className='img-box card-banner'>
         <img
           src={image}
@@ -37,6 +38,7 @@ const ProductCard: FC<ProductCardProps> = ({
           className='img-cover'
         />
       </figure>
+      </div>
       <div className='card-content'>
         <div className='flex items-center justify-between gap-3'>
           <h4 className='card-title'>{title}</h4>
@@ -45,9 +47,7 @@ const ProductCard: FC<ProductCardProps> = ({
           </span>
         </div>
         <p className='card-description'>{description}</p>
-        {/* <Button classes='text-xs font-montserrat gap-2 text-nowrap'>
-          <Plus /> AGGIUNGERE AL CARRELLO
-        </Button> */}
+
       </div>
     </div>
   );
