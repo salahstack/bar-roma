@@ -40,6 +40,7 @@ const Hero = () => {
             to='#menu'
             variant='secondary'
             aria-label='scopri in nostro menù'
+            target='_self'
           >
             <span className='whitespace-nowrap'>Scopri in nostro menù</span>
             <ArrowRight aria-hidden='true' />

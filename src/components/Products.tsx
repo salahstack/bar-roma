@@ -21,7 +21,7 @@ interface ProductCardProps {
   price: number;
   description: string;
   category: string;
-  classes?: string
+  classes?: string;
 }
 
 interface ProductsProps {
@@ -32,7 +32,7 @@ const Products: FC<ProductsProps> = ({ products }) => {
   const { activeCategory } = useFoodCategory();
   const [showAll, setShowAll] = useState(false);
 
-  let filteredProducts =
+  const filteredProducts =
     activeCategory === 'Tutti'
       ? products
       : products.filter((product) => product.category === activeCategory);
@@ -43,30 +43,28 @@ const Products: FC<ProductsProps> = ({ products }) => {
 
   const handleShowAll = () => setShowAll(true);
 
-  filteredProducts =
-    filteredProducts.length <= 6
-      ? filteredProducts
-      : filteredProducts.slice(0, 6);
   return (
     <>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10'>
-        {displayedProducts.map(({ image, title, description, price }, index) => (
-          <ProductCard
-            image={image}
-            title={title}
-            description={description}
-            price={price}
-            key={index}
-            classes='reveal-up'
-          />
-        ))}
+        {displayedProducts.map(
+          ({ image, title, description, price }, index) => (
+            <ProductCard
+              image={image}
+              title={title}
+              description={description}
+              price={price}
+              key={index}
+              // classes='reveal-up'
+            />
+          )
+        )}
       </div>
-      {!showAll && (
+      {filteredProducts.length > 6 && (
         <Button
           classes='mt-5 w-full max-w-sm mx-auto'
           onClick={handleShowAll}
         >
-          Load more
+          mostra tutto
         </Button>
       )}
     </>

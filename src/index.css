@@ -177,7 +177,7 @@
     @apply p-4 text-center font-playfair;
   }
   .signature-offerings-card .card-content .card-title {
-    @apply text-2xl font-bold uppercase;
+    @apply text-xl font-bold uppercase;
   }
   .signature-offerings-card .card-content .card-description {
     @apply text-roma-dark/80 my-3;
@@ -190,13 +190,13 @@
     @apply rounded-lg overflow-hidden bg-white shadow-2xl;
   }
   .product-card .card-banner {
-    @apply max-h-64;
+    @apply max-h-52;
   }
   .product-card .card-content {
     @apply p-3 font-playfair;
   }
   .product-card .card-content .card-title {
-    @apply text-2xl font-bold;
+    @apply text-xl font-bold;
   }
   .product-card .card-content .card-price {
     @apply text-lg font-semibold text-roma-red flex items-center gap-0.5;
