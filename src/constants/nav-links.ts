@@ -5,7 +5,7 @@ interface navLinksInterface {
 
 const navLinks: navLinksInterface[] = [
   {
-    label: 'Casa',
+    label: 'Home',
     href: '#casa',
   },
   {

@@ -1,7 +1,10 @@
 /**
- * Components
+ * Node modules
  */
 import { useEffect, useState } from 'react';
+/**
+ * Components
+ */
 import { IconButton } from './Button';
 import Navbar from './Navbar';
 /**
@@ -23,13 +26,12 @@ const Header = () => {
   useEffect(() => {
     // scroll function
     const handleScroll = () => setIsScrolling(scrollY > 50);
-
       // link scroll function to scroll event
     window.addEventListener('scroll', handleScroll);
 
     // clean up function
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [])
+  }, []);
   return (
     <header className={`header ${isScrolling ? 'active' : ''}`}>
       <div className='container flex items-center justify-between gap-4 h-full relative'>
