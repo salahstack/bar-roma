@@ -1,4 +1,11 @@
+/**
+ * Node modules
+ */
 import type { FC } from 'react';
+
+/**
+ * Interfaces
+ */
 
 interface navLinkInterface {
   label: string;
