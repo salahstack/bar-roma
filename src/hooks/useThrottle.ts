@@ -1,6 +1,6 @@
 import { useCallback, useRef } from 'react';
 
-const useThrottle = <T extends (...args: unknown[]) => never>(
+const useThrottle = <T extends (...args: never[]) => unknown>(
   callback: T,
   delay: number = 400,
 ) => {
@@ -17,5 +17,8 @@ const useThrottle = <T extends (...args: unknown[]) => never>(
     [callback, delay],
   );
 };
+
+
+
 
 export { useThrottle };

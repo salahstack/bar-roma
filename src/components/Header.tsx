@@ -1,7 +1,7 @@
 /**
  * Node modules
  */
-import { memo, useEffect, useState } from 'react';
+import { memo, useCallback, useEffect, useState } from 'react';
 /**
  * Components
  */
@@ -15,24 +15,27 @@ import { Menu, X } from 'lucide-react';
  * Constants
  */
 import { navLinks } from '../constants/nav-links';
+/**
+ * Hooks
+ */
+import { useThrottle } from '../hooks/useThrottle';
 
 const Header = () => {
-  const [isScrolling, setIsScrolling] = useState(false);
+  const [scrollY, setScrollY] = useState<number>(0);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => setIsOpen((prev) => !prev);
 
+  const handleScroll = useCallback(() => setScrollY(window.scrollY), []);
+  const throttledScrollY = useThrottle(handleScroll)
   useEffect(() => {
-    // scroll function
-    const handleScroll = () => setIsScrolling(scrollY > 50);
-      // link scroll function to scroll event
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', throttledScrollY);
 
     // clean up function
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', throttledScrollY);
+  }, [throttledScrollY]);
   return (
-    <header className={`header ${isScrolling ? 'active' : ''}`}>
+    <header className={`header ${scrollY > 50 ? 'active' : ''}`}>
       <div className='container flex items-center justify-between gap-4 h-full relative'>
         <a href='#casa' aria-label="Bar Roma, Dal 1908, casa link">
           <div className='text-xl md:text-3xl font-playfair font-medium text-white whitespace-nowrap'>
