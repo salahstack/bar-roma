@@ -25,9 +25,11 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => setIsOpen((prev) => !prev);
-
-  const handleScroll = useCallback(() => setScrollY(window.scrollY), []);
-  const throttledScrollY = useThrottle(handleScroll)
+  const handleScroll = useCallback(
+    () => requestAnimationFrame(() => setScrollY(window.scrollY)),
+    [],
+  );
+  const throttledScrollY = useThrottle(handleScroll, 200);
   useEffect(() => {
     window.addEventListener('scroll', throttledScrollY);
 
@@ -35,13 +37,18 @@ const Header = () => {
     return () => window.removeEventListener('scroll', throttledScrollY);
   }, [throttledScrollY]);
   return (
-    <header className={`header ${scrollY > 50 ? 'active' : ''}`}>
+    <header className={`header ${scrollY >= 50 ? 'active' : ''}`}>
       <div className='container flex items-center justify-between gap-4 h-full relative'>
-        <a href='#casa' aria-label="Bar Roma, Dal 1908, casa link">
+        <a
+          href='#casa'
+          aria-label='Bar Roma, Dal 1908, casa link'
+        >
           <div className='text-xl md:text-3xl font-playfair font-medium text-white whitespace-nowrap'>
             Bar Roma
           </div>
-          <span className='font-cormorant text-roma-gold font-bold'>Dal 1908</span>
+          <span className='font-cormorant text-roma-gold font-bold'>
+            Dal 1908
+          </span>
         </a>
         <Navbar
           links={navLinks}

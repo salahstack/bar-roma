@@ -62,7 +62,7 @@
     @apply mx-auto px-4 md:px-6;
   }
   section:not(.hero) {
-    @apply mb-16;
+    @apply mb-16 scroll-mt-20
   }
   ::selection {
     @apply bg-roma-gold text-roma-dark;
