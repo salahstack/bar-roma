@@ -3,6 +3,7 @@
  */
 import Tabs from './Tabs';
 import Tab from './Tab';
+import { memo } from 'react';
 
 const About = () => {
   const date = new Date();
@@ -111,4 +112,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default memo(About);

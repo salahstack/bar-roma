@@ -16,6 +16,7 @@ import { IconButton } from './Button';
  * Constants
  */
 import { reviewsData } from '../constants/reviews-data';
+import { memo } from 'react';
 
 const Testimonials = () => {
   return (
@@ -83,4 +84,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default memo(Testimonials);

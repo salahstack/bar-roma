@@ -8,6 +8,8 @@ import type {
   ReactNode,
 } from 'react';
 
+import { Link } from 'react-router-dom';
+
 /**
  * Interfaces
  */
@@ -25,19 +27,19 @@ const Button: FC<ButtonProps> = ({
   classes = '',
   variant = 'primary',
   to = '',
-  target = '_blank',
+  target = '_self',
   ...rest
 }) => {
   if (to) {
     return (
-      <a
-        href={to}
+      <Link
+        to={to}
         className={`btn ${variant} ${classes}`}
         target={target}
         {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {children}
-      </a>
+      </Link>
     );
   } else {
     return (
@@ -64,19 +66,19 @@ const IconButton: FC<IconButtonProps> = ({
   classes = '',
   variant = 'primary',
   to = '',
-  target = '_blank',
+  target = '_self',
   ...rest
 }) => {
   if (to) {
     return (
-      <a
-        href={to}
+      <Link
+        to={to}
         className={`icon-btn ${variant} ${classes}`}
         target={target}
         {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {children}
-      </a>
+      </Link>
     );
   } else {
     return (

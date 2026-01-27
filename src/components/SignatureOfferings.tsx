@@ -1,6 +1,7 @@
 /**
  * Constants
  */
+import { memo } from 'react';
 import { signatureOfferingsData } from '../constants/signature-offerings-data';
 /**
  * Components
@@ -32,4 +33,4 @@ const SignatureOfferings  = () => {
   );
 };
 
-export default SignatureOfferings;
+export default memo(SignatureOfferings);

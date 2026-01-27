@@ -4,6 +4,7 @@
 import { Camera } from 'lucide-react';
 import { galleryData } from '../constants/gallery-data';
 import { Button } from './Button';
+import { memo } from 'react';
 
 const Gallery = () => {
   return (
@@ -72,4 +73,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default memo(Gallery);

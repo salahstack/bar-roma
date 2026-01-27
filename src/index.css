@@ -51,7 +51,11 @@
   button {
     @apply cursor-pointer transition-all;
   }
-  button:active {
+  a {
+    @apply transition-all
+  }
+  button:active,
+  a.btn:active {
     @apply scale-95;
   }
   .container {
@@ -61,7 +65,7 @@
     @apply mb-16;
   }
   ::selection {
-    @apply bg-roma-gold text-roma-dark
+    @apply bg-roma-gold text-roma-dark;
   }
 
   ::-webkit-scrollbar {

@@ -8,6 +8,7 @@ import Products from './Products';
  */
 import { productsData } from '../constants/products-data';
 import { menuCategoriesData } from '../constants/menu-categories-data';
+import { memo } from 'react';
 
 const Menu = () => {
   return (
@@ -31,4 +32,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default memo(Menu);

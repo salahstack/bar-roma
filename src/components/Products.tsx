@@ -1,7 +1,7 @@
 /**
  * Node modules
  */
-import { useState, type FC } from 'react';
+import { useEffect, useMemo, useState, type FC } from 'react';
 /**
  * Components
  */
@@ -21,6 +21,7 @@ interface ProductCardProps {
   price: number;
   description: string;
   category: string;
+  categorySlug: string;
   classes?: string;
 }
 
@@ -32,10 +33,19 @@ const Products: FC<ProductsProps> = ({ products }) => {
   const { activeCategory } = useFoodCategory();
   const [showAll, setShowAll] = useState(false);
 
-  const filteredProducts =
-    activeCategory === 'Tutti'
-      ? products
-      : products.filter((product) => product.category === activeCategory);
+  useEffect(() => {
+    setShowAll(false);
+  }, [activeCategory])
+
+  const filteredProducts = useMemo(() => {
+    if (!activeCategory || activeCategory.toLowerCase() === 'tutti') return products;
+
+    return products.filter(
+      (product) => product.categorySlug === activeCategory
+    );
+  }, [products, activeCategory]);
+
+
 
   const displayedProducts = showAll
     ? filteredProducts

@@ -1,7 +1,7 @@
 /**
  * Node modules
  */
-import type { FC } from 'react';
+import { memo, type FC } from 'react';
 /**
  * Constants
  */
@@ -90,4 +90,4 @@ const Footer: FC = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);
