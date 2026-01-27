@@ -1,16 +1,18 @@
 /**
- * Node modules
+ * React router dom modules
  */
+import { useSearchParams } from 'react-router-dom';
 
-import { useContext } from "react";
-/**
- * Contexts
- */
-import { FoodCategoryContext } from "../contexts/FoodCategoryContext";
+const useFoodCategory = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
 
+  const activeCategory = searchParams.get('category') || 'tutti';
 
-const useFoodCategory = () => useContext(FoodCategoryContext);
+  const updateCategory = (category: string) => {
+    setSearchParams({ category });
+  };
 
-export {
-  useFoodCategory
-}
+  return { activeCategory, updateCategory }
+};
+
+export { useFoodCategory };
