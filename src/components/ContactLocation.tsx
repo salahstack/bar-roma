@@ -22,6 +22,7 @@ import MapWithDirections from './MapWithDirections';
  * Constants
  */
 import { openingHours } from '../constants/opening-hours';
+import { memo } from 'react';
 
 const ContactLocation = () => {
   const date = new Date();
@@ -144,4 +145,4 @@ const ContactLocation = () => {
   );
 };
 
-export default ContactLocation;
+export default memo(ContactLocation);

@@ -1,7 +1,7 @@
 /**
  * Node modules
  */
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 /**
  * Components
  */
@@ -21,7 +21,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => setIsOpen((prev) => !prev);
-
 
   useEffect(() => {
     // scroll function
@@ -77,4 +76,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

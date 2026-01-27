@@ -1,4 +1,8 @@
 /**
+ * Node modules
+ */
+import { useCallback, useEffect, useState } from 'react';
+/**
  * Components
  */
 import { ArrowUp } from 'lucide-react';
@@ -14,24 +18,31 @@ import Menu from './components/Menu';
 import SignatureOfferings from './components/SignatureOfferings';
 import Testimonials from './components/Testimonials';
 /**
+ * Hooks
+ */
+import { useThrottle } from './hooks/useThrottle';
+/**
  * Functions
  */
 import { scrollToTop } from './functions/scrollToTop';
-import { useEffect, useState } from 'react';
 
 function App() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const handleScroll = useCallback(() => {
+    setScrollY(window.scrollY);
+  }, []);
+
+  const throttledScroll = useThrottle(handleScroll);
 
   useEffect(() => {
     // scroll function
-    const handleScroll = () => setIsScrolled(scrollY >= 700);
 
     // link scroll function to scroll event
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', throttledScroll);
 
     // Cleanup function
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', throttledScroll);
+  }, [throttledScroll]);
 
   return (
     <div className='relative'>
@@ -57,9 +68,9 @@ function App() {
       </main>
       {/* Footer */}
       <Footer />
-      {isScrolled && (
+      {scrollY > 700 && (
         <IconButton
-          classes='fixed bottom-6 right-6 z-500 shadow-lg'
+          classes='fixed bottom-6 right-6 z-1700 shadow-lg'
           onClick={scrollToTop}
         >
           <ArrowUp size={22} />

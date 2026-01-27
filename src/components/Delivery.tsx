@@ -6,6 +6,7 @@ import { Motorbike } from 'lucide-react';
  * Components
  */
 import { Button } from './Button';
+import { memo } from 'react';
 
 const Delivery = () => {
   return (
@@ -42,4 +43,4 @@ const Delivery = () => {
   );
 };
 
-export default Delivery;
+export default memo(Delivery);

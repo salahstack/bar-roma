@@ -1,6 +1,7 @@
 /**
  * Components
  */
+import { memo } from 'react';
 import { Button } from './Button';
 /**
  * Icons
@@ -36,6 +37,7 @@ const Hero = () => {
           <Button
             classes='text-nowrap'
             to='https://deliveroo.it/en/menu/napoli/nocera-superiore/bar-roma-nocera'
+            target='_blank'
           >
             Ordina su Deliveroo
           </Button>
@@ -44,7 +46,6 @@ const Hero = () => {
             to='#menu'
             variant='secondary'
             aria-label='scopri in nostro menù'
-            target='_self'
           >
             <span className='whitespace-nowrap'>Scopri in nostro menù</span>
             <ArrowRight aria-hidden='true' />
@@ -65,4 +66,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default memo(Hero);
