@@ -32,17 +32,17 @@ function App() {
     setScrollY(window.scrollY);
   }, []);
 
-  const throttledScroll = useThrottle(handleScroll);
+  const throttledScrollY = useThrottle(handleScroll);
 
   useEffect(() => {
     // scroll function
 
     // link scroll function to scroll event
-    window.addEventListener('scroll', throttledScroll);
+    window.addEventListener('scroll', throttledScrollY);
 
     // Cleanup function
-    return () => window.removeEventListener('scroll', throttledScroll);
-  }, [throttledScroll]);
+    return () => window.removeEventListener('scroll', throttledScrollY);
+  }, [throttledScrollY]);
 
   return (
     <div className='relative'>
